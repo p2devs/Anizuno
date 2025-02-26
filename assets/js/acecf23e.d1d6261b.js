@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdekufusion=self.webpackChunkdekufusion||[]).push([[1903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/DekuFusion-Release/blog","blogTitle":"Blog","authorsListPath":"/DekuFusion-Release/blog/authors"}')}}]);
