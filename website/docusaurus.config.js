@@ -10,20 +10,20 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "DekuFusion",
-  tagline: "The Ultimate Fusion Generator",
-  favicon: "img/favicon.ico",
+  title: "Anizuno",
+  tagline: "Anizuno is the ultimate anime database.",
+  favicon: "img/icon.svg",
 
   // Set the production url of your site here
   url: "https://p2devs.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/DekuFusion-Release/",
+  baseUrl: "/Anizuno/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "P2 Devs", // Usually your GitHub org/user name.
-  projectName: "DekuFusion", // Usually your repo name.
+  projectName: "Anizuno", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -76,10 +76,10 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "DekuFusion",
+        title: "Anizuno",
         logo: {
-          alt: "My Site Logo",
-          src: "img/logo.svg",
+          alt: "Anizuno Logo",
+          src: "img/icon.svg",
         },
         items: [
           // {
@@ -89,12 +89,12 @@ const config = {
           //   label: "Tutorial",
           // },
           {
-            href: "https://github.com/p2devs/DekuFusion-Release/releases",
+            href: "https://github.com/p2devs/Anizuno/releases",
             label: "Release Notes",
             position: "right",
           },
           {
-            href: "https://github.com/p2devs/DekuFusion-Release",
+            href: "https://github.com/p2devs/Anizuno",
             label: "GitHub",
             position: "right",
           },

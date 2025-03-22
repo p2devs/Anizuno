@@ -1,5 +1,5 @@
 name: Issue report
-description: Report an issue in DekuFusion
+description: Report an issue in Anizuno
 labels: [Bug]
 body:
   - type: textarea
@@ -38,9 +38,9 @@ body:
       required: true
 
   - type: input
-    id: dekufusion-version
+    id: anizuno-version
     attributes:
-      label: DekuFusion version
+      label: Anizuno version
       description: You can find your Ink version in your phone settings in android or IOS check into TestFight.
       placeholder: |
         Example: "1.0"
