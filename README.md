@@ -51,7 +51,7 @@
 <!-- Add some screenshots here to visually showcase your application -->
 <p align="center">
   <!-- Example: -->
-  <img src="./.github/readme-images/screenshot.jpg" width="200" />
+  <img src="./.github/readme-images/screenshot.jpg" width="800" />
   <!-- <img src="./.github/readme-images/screenshot2.png" width="200" /> -->
   <!-- <img src="./.github/readme-images/screenshot3.png" width="200" /> -->
 </p>
