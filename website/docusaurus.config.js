@@ -11,7 +11,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Anizuno",
-  tagline: "Anizuno is the ultimate anime database.",
+  tagline: "Anizuno - Ultimate Anime Insights",
   favicon: "img/icon.svg",
 
   // Set the production url of your site here
@@ -112,36 +112,28 @@ const config = {
           //     },
           //   ],
           // },
-          // {
-          //   title: "Community",
-          //   items: [
-          //     {
-          //       label: "Stack Overflow",
-          //       href: "https://stackoverflow.com/questions/tagged/docusaurus",
-          //     },
-          //     {
-          //       label: "Discord",
-          //       href: "https://discordapp.com/invite/docusaurus",
-          //     },
-          //     {
-          //       label: "X",
-          //       href: "https://x.com/docusaurus",
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: "More",
-          //   items: [
-          //     {
-          //       label: "Blog",
-          //       to: "/blog",
-          //     },
-          //     {
-          //       label: "GitHub",
-          //       href: "https://github.com/facebook/docusaurus",
-          //     },
-          //   ],
-          // },
+          {
+            title: "Community",
+            items: [
+              {
+                label: "Discord",
+                href: "https://discord.gg/AqBDUDMkKa",
+              },
+              {
+                label: "Github Discussions",
+                href: "https://github.com/p2devs/Anizuno/discussions",
+              },
+            ],
+          },
+          {
+            title: "More",
+            items: [
+              {
+                label: "GitHub",
+                href: "https://github.com/p2devs/Anizuno",
+              },
+            ],
+          },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} P2 Devs.`,
       },

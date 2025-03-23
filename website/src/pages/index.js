@@ -65,12 +65,10 @@ function HomepageHeader() {
         </div>
         <h2 className={styles.subtitle}>{siteConfig.tagline}</h2>
         <p className={styles.description}>
-          Anizuno is a free mobile app offering a vast collection of comics and
-          manga across genres like superheroes, sci-fi, fantasy, and manga.
-          Enjoy a seamless experience with user-friendly navigation and
-          customizable settings. Stay updated with the latest releases and
-          classics. With Anizuno, your favorite stories and characters are
-          always at your fingertips.
+          Anizuno is a free, cross-platform mobile app that provides
+          comprehensive insights into the world of anime. Discover everything
+          from the latest anime releases to timeless classics, all in one
+          intuitive and seamless experience.
         </p>
         <p
           style={{ fontStyle: "italic", fontWeight: "bold", color: "#ffcc00" }}
@@ -78,14 +76,7 @@ function HomepageHeader() {
           🌟 Star this repository to support the developer and encourage further
           development of the application
         </p>
-        <p style={{ fontWeight: "bold", color: "#ff6666" }}>
-          ⚠️ Warning: Please do not attempt to upload Anizuno or any of its
-          forks to the Play Store, App Store, or any other stores on the
-          internet. Doing so may infringe their terms and conditions,
-          potentially resulting in legal action or immediate takedown of the
-          app.
-        </p>
-        {/* <div className={styles.buttons}>
+        <div className={styles.buttons}>
           <button
             onClick={() => {
               window.open("https://testflight.apple.com/join/sV2XjUus");
@@ -102,52 +93,51 @@ function HomepageHeader() {
           >
             Download Android
           </button>
-        </div> */}
+        </div>
 
         <div className={styles.features}>
           <h2>Features</h2>
           <div className={styles.featuresContainer}>
             <div className={styles.feature}>
-              <h3>Vast Anime Library</h3>
+              <h3>Extensive Anime Library</h3>
               <p>
-                Access a wide range of anime across various genres including
-                superheroes, sci-fi, fantasy, and more.
+                Browse a curated collection of anime from trusted, publicly
+                available sources.
               </p>
             </div>
             <div className={styles.feature}>
               <h3>User-Friendly Interface</h3>
               <p>
-                Intuitive and easy-to-use navigation ensures a seamless reading
-                experience.
+                Enjoy an intuitive navigation system and customizable settings
+                on both Android and iOS devices.
               </p>
             </div>
             <div className={styles.feature}>
-              <h3>Releases updates</h3>
-              <p>Stay up-to-date with new releases.</p>
+              <h3>Real-Time Updates & Detailed Insights</h3>
+              <p>
+                Stay informed with timely release information and in-depth
+                analyses on your favorite series and characters.
+              </p>
             </div>
             <div className={styles.feature}>
-              <h3>Search and Discover</h3>
+              <h3>Powerful Search & Discovery</h3>
               <p>
-                Easily find anime with search functionality and explore curated
-                collections.
+                Quickly locate anime titles through robust search functionality
+                and thoughtfully curated collections.
               </p>
             </div>
             <div className={styles.feature}>
               <h3>Push Notifications</h3>
               <p>
-                We have implemented push notifications to inform users about new
-                releases, updates.
+                Receive alerts about new releases, updates, and key community
+                events.
               </p>
             </div>
             <div className={styles.feature}>
-              <h3>Multi-Platform Support</h3>
-              <p>Available on both Android and iOS devices.</p>
-            </div>
-            <div className={styles.feature}>
-              <h3>Community Support</h3>
+              <h3>Community Engagement</h3>
               <p>
-                Join our community on Discord for real-time support and
-                discussion.
+                Connect with fellow anime enthusiasts on Discord for support,
+                discussions, and the latest news.
               </p>
             </div>
           </div>
@@ -164,8 +154,8 @@ function HomepageHeader() {
               <a href="https://redux.js.org/">Redux</a> - State management
             </li> */}
             <li>
-              <a href="https://firebase.google.com/">Firebase</a> - Backend
-              services
+              <a href="https://firebase.google.com/">Firebase</a> - Crashlytics,
+              Analytics and Push Notifications.
             </li>
             <li>
               <a href="https://docusaurus.io/">Docusaurus</a> - Documentation
@@ -174,35 +164,28 @@ function HomepageHeader() {
         </div>
 
         <div className={styles.disclaimer}>
-          <h2>Disclaimer</h2>
+          <h2>Content & Copyright Disclaimer</h2>
+          <p>
+            Anizuno aggregates anime insights by indexing information that is
+            publicly available.
+          </p>
           <ul>
             <li>
-              Content Aggregation Only: Anizuno simply scrapes links from
-              various websites, helping users easily discover anime.
+              Content Aggregation Only: We do not host any copyrighted material.
+              All anime images, descriptions, and data are sourced externally
+              and are not hosted by us.
             </li>
             <li>
-              No Hosting of Content: Neither Anizuno nor its developers or staff
-              host any of the content available in the app. All images and anime
-              information are sourced from publicly available APIs.
+              Copyright & Legal Considerations: Re-uploading Anizuno or any of
+              its forks to commercial app stores may violate copyright laws and
+              the terms of service of original content providers. Users and
+              developers are advised to adhere to these guidelines to avoid
+              potential legal issues.
             </li>
             <li>
-              Third-Party Sources: All anime links provided in Anizuno are
-              obtained from external third-party anime hosting websites.
-            </li>
-            <li>
-              Liability Disclaimer: Anizuno and its owners are not responsible
-              for any misuse of the content within or outside the app and cannot
-              be held accountable for its distribution.
-            </li>
-            <li>
-              User Responsibility: By using Anizuno, you acknowledge that the
-              developers are not liable for any content within the app, which
-              may originate from third-party sources.
-            </li>
-            <li>
-              Copyright Concerns: If you have any copyright or infringement
-              concerns, please contact the respective source website directly.
-              The developers assume no legal responsibility.
+              Third-Party Sources: Content links provided within the app lead to
+              external sites. For copyright or infringement concerns, please
+              contact the respective content owners directly.
             </li>
           </ul>
         </div>
