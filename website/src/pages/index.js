@@ -79,7 +79,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <button
             onClick={() => {
-              window.open("https://testflight.apple.com/join/sV2XjUus");
+              alert("iOS support has been discontinued for now");
             }}
             className={styles.downloadButton}
           >
