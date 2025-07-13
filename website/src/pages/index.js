@@ -93,6 +93,14 @@ function HomepageHeader() {
           >
             Download Android
           </button>
+          <button
+            onClick={() => {
+              window.open("https://strim.p2devs.engineer");
+            }}
+            className={styles.downloadButton}
+          >
+            Watch On Website
+          </button>
         </div>
 
         <div className={styles.features}>
