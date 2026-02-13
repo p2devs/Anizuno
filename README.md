@@ -76,7 +76,7 @@
 
 For any inquiries, feel free to reach out through one of the following channels:
 
-- **Email**: [anizuno@mail.p2devs.engineer](mailto:anizuno@mail.p2devs.engineer)
+- **Email**: [anizuno@capacity.rocks](mailto:anizuno@capacity.rocks)
 - **Discord**: Join our community on [Discord](https://discord.gg/AqBDUDMkKa) for real-time support and discussion.
 - **GitHub Discussions**: Visit our [GitHub Discussions board](https://github.com/p2devs/Anizuno/discussions) to engage with our community, ask questions, and find answers to common issues.
 

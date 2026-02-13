@@ -95,7 +95,7 @@ function HomepageHeader() {
           </button>
           <button
             onClick={() => {
-              window.open("https://strim.p2devs.engineer");
+              window.open("https://capacity.rocks");
             }}
             className={styles.downloadButton}
           >
@@ -207,8 +207,8 @@ function HomepageHeader() {
           <ul>
             <li>
               Email:{" "}
-              <a href="mailto:anizuno@mail.p2devs.engineer">
-                anizuno@mail.p2devs.engineer
+              <a href="mailto:anizuno@capacity.rocks">
+                anizuno@capacity.rocks
               </a>
             </li>
             <li>
