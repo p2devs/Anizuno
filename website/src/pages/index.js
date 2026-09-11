@@ -79,7 +79,9 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <button
             onClick={() => {
-              window.open("https://testflight.apple.com/join/sV2XjUus");
+              alert(
+                "Our iOS application is currently unavailable because our Apple Developer account has expired.\n\nUnfortunately, we have not yet been able to collect enough funds to cover the Apple Developer Program fee required to maintain and distribute the iOS application.\n\nWe appreciate your understanding and support."
+              );
             }}
             className={styles.downloadButton}
           >
