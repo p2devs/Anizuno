@@ -48,6 +48,11 @@ const config = {
           position: 'right',
         },
         {
+          href: 'https://ko-fi.com/p2devs',
+          label: 'Support / Donate',
+          position: 'right',
+        },
+        {
           to: '/#download',
           label: 'Get Anizuno',
           position: 'right',

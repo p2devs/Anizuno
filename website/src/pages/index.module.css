@@ -514,7 +514,11 @@
   margin: 0;
   font-size: 0.88rem;
 }
-.community > a {
+.communityActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
   flex-shrink: 0;
 }
 @media (min-width: 997px) {
@@ -743,7 +747,11 @@
     align-items: flex-start;
     gap: 22px;
   }
-  .community > a {
+  .communityActions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .communityActions > a {
     width: 100%;
   }
 }

@@ -488,13 +488,19 @@ export default function Home() {
             <h2 id="community-title">Better with company.</h2>
             <p>
               Share a recommendation, ask for help, or tell us what you’d love
-              to see next.
+              to see next. You can also support Anizuno with an optional donation.
             </p>
           </div>
-          <a className={styles.secondaryButton} href={LINKS.discord}>
-            Join the Discord
-            <Arrow />
-          </a>
+          <div className={styles.communityActions}>
+            <a className={styles.secondaryButton} href={LINKS.discord}>
+              Join the Discord
+              <Arrow />
+            </a>
+            <a className={styles.primaryButton} href={LINKS.donate}>
+              Support / Donate
+              <Arrow />
+            </a>
+          </div>
         </section>
       </main>
     </Layout>
