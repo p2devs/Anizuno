@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkanizuno=self.webpackChunkanizuno||[]).push([[1903],{1912:o=>{o.exports=JSON.parse('{"blogBasePath":"/Anizuno/blog","blogTitle":"Blog","authorsListPath":"/Anizuno/blog/authors"}')}}]);
