@@ -1,0 +1,12 @@
+{
+  "version": "v1.2.4",
+  "publishedAt": "2026-09-18T08:43:45Z",
+  "checkedAt": "2026-10-03T00:00:00Z",
+  "url": "https://github.com/p2devs/Anizuno/releases/tag/1.2.4",
+  "apk": {
+    "name": "Anizuno-v1.2.4.apk",
+    "url": "https://github.com/p2devs/Anizuno/releases/download/1.2.4/Anizuno-v1.2.4.apk",
+    "size": 108853076
+  },
+  "highlights": ["Fixed source-related issues."]
+}

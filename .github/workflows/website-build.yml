@@ -15,10 +15,18 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Install and Build
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install, test, and build
+        working-directory: website
         run: |
-          cd website && npm install
-          npm run build
+          corepack enable
+          yarn install --frozen-lockfile
+          yarn test
+          yarn build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4

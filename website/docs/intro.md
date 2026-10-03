@@ -1,47 +1,25 @@
 ---
-sidebar_position: 1
+title: Help center
+description: Get started with Anizuno, manage your library, and find help with playback and downloads.
+slug: /
 ---
 
-# Tutorial Intro
+# A little help for your next episode.
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Anizuno brings anime discovery, your personal library, and airing schedules together. Start with the guide that matches what you need.
 
-## Getting Started
+- **[Get started with Anizuno](./installation.md)** — Android APKs, the iOS TestFlight beta, and [Web](https://capacity.rocks/).
+- **[Playback and downloads](./playback-downloads.md)** — sources, subtitles, quality, and offline episodes.
+- **[Library and settings](./library-settings.md)** — favorites, watch history, themes, languages, and schedule alerts.
 
-Get started by **creating a new site**.
+## Features and availability
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+The available experience depends on your app version, build, device, and content source. Some builds focus on discovery and tracking and open an official streaming service. In-app playback and downloads appear only where enabled.
 
-### What you'll need
+This showcase describes the mobile app's capabilities and links to the [Web version at capacity.rocks](https://capacity.rocks/). The [GitHub release notes](https://github.com/p2devs/Anizuno/releases) describe each published Android release; TestFlight lists the available iOS beta. Features and updates can differ across Android, iOS, and Web.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## Still need a hand?
 
-## Generate a new site
+Join [Discord](https://discord.gg/AqBDUDMkKa), open a [GitHub issue](https://github.com/p2devs/Anizuno/issues), or email [anizuno@capacity.rocks](mailto:anizuno@capacity.rocks).
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+For a useful bug report, include your app version, device and OS version, the steps you took, and the visible error. For playback or download problems, include the anime, episode, Sub/Dub version, and source name. Avoid posting private information or signed media URLs.
