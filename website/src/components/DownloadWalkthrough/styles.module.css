@@ -1,0 +1,33 @@
+.walkthrough {
+  width: 100%;
+  min-width: 0;
+  margin: 0 0 25px;
+}
+
+.video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #0d1916;
+  border: 1px solid var(--anizuno-border);
+  border-radius: 10px;
+}
+
+.caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 16px;
+  margin-top: 10px;
+  color: var(--anizuno-muted);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.caption a {
+  flex-shrink: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

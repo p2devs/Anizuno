@@ -9,7 +9,7 @@ slug: /
 Anizuno brings anime discovery, your personal library, and airing schedules together. Start with the guide that matches what you need.
 
 - **[Get started with Anizuno](./installation.md)** — Android APKs, the iOS TestFlight beta, and [Web](https://capacity.rocks/).
-- **[Playback and downloads](./playback-downloads.md)** — sources, subtitles, quality, and offline episodes.
+- **[Playback and downloads](./playback-downloads.md)** — sources, subtitles, quality, and offline episodes. Includes a [Sub/Dub download video](./playback-downloads.md#download-sub-and-dub).
 - **[Library and settings](./library-settings.md)** — favorites, watch history, themes, languages, and schedule alerts.
 
 ## Features and availability

@@ -5,6 +5,7 @@ import useBrokenLinks from '@docusaurus/useBrokenLinks';
 import Layout from '@theme/Layout';
 import { useRelease } from '../lib/useRelease';
 import { LINKS, formatDate, formatSize } from '../lib/releases.mjs';
+import DownloadWalkthrough from '../components/DownloadWalkthrough';
 import styles from './index.module.css';
 
 function Arrow({ down = false }) {
@@ -60,11 +61,24 @@ const questions = [
     </>,
   ],
   [
+    'How do I download both Sub and Dub?',
+    <>
+      Open an anime and tap the download icon beside Play. Choose Sub and a
+      source, select a quality, then tap Download. Repeat with Dub to save
+      that version too. They appear as separate entries in{' '}
+      <strong>Library → Downloads</strong>. Watch the Android walkthrough below
+      or follow the{' '}
+      <Link to="/help/playback-downloads#download-sub-and-dub">written steps</Link>.
+    </>,
+    <DownloadWalkthrough />,
+  ],
+  [
     'Can I watch offline?',
     <>
-      In builds with downloads enabled, save a supported episode and wait until
-      it is marked ready in Library → Downloads. Sources, subtitles, and
-      background transfers can behave differently by device. See{' '}
+      In builds with downloads enabled, open <strong>Library → Downloads</strong>
+      {' '}and wait for <strong>Ready offline</strong>. Then tap{' '}
+      <strong>Watch offline</strong> on the Sub or Dub entry you want. Sources,
+      subtitles, and background transfers can behave differently by device. See{' '}
       <Link to="/help/playback-downloads">the download guide</Link>.
     </>,
   ],
@@ -88,7 +102,7 @@ const questions = [
 
 export default function Home() {
   const brokenLinks = useBrokenLinks();
-  ['features', 'download', 'release'].forEach(id =>
+  ['features', 'download', 'release', 'faq'].forEach(id =>
     brokenLinks.collectAnchor(id),
   );
   const { release, status } = useRelease();
@@ -454,6 +468,7 @@ export default function Home() {
         </section>
 
         <section
+          id="faq"
           className={`${styles.section} ${styles.faq}`}
           aria-labelledby="faq-title"
         >
@@ -468,13 +483,14 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.questions}>
-            {questions.map(([question, answer]) => (
+            {questions.map(([question, answer, media]) => (
               <details key={question}>
                 <summary>
                   {question}
                   <span aria-hidden="true">+</span>
                 </summary>
                 <p>{answer}</p>
+                {media}
               </details>
             ))}
           </div>

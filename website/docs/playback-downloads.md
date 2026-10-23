@@ -1,7 +1,9 @@
 ---
 title: Playback and downloads
-description: Choose playback sources, save supported episodes, and troubleshoot downloads in Anizuno.
+description: Watch how to download Sub and Dub episodes, choose sources and quality, and find saved episodes in Anizuno.
 ---
+
+import DownloadWalkthrough from '@site/src/components/DownloadWalkthrough';
 
 # Playback and downloads
 
@@ -23,18 +25,30 @@ On Android, **Fit** shows the whole picture and **Fill** crops the edges to fill
 
 ## Save an episode
 
-1. Open an anime and tap the download icon beside Play, or use Download in the player's menu.
-2. Choose the available version, source, and quality.
-3. Open **Library → Downloads** to follow progress.
-4. Wait for the episode to be marked ready before disconnecting.
+### Download in Sub and Dub {#download-sub-and-dub}
 
-Downloads include supplied subtitles. Different Sub/Dub versions are separate downloads. Downloads use your current Wi-Fi or mobile connection, and higher quality uses more storage.
+This Android walkthrough saves the same episode in both versions, then finds them in **Library → Downloads**. It has on-screen instructions and no audio.
+
+<DownloadWalkthrough />
+
+1. Open an anime and check the episode number beside **Play**. Tap the **download icon** next to it.
+2. Choose **Sub sources** if the version chooser appears, or select the **Sub** tab in the source picker. Pick an available source.
+3. Select a quality if choices are available, then tap **Download**. Lower quality uses less storage.
+4. To save the dubbed version too, open the download picker again, switch to **Dub**, and choose a Dub source. Select its quality and tap **Download**.
+5. Go back and open **Library → Downloads**. The same episode appears as separate **SUB** and **DUB** entries.
+6. Wait until each entry says **Ready offline**. Tap **Watch offline** on the version you want.
+
+You can also download the current source from **Download** in the player's three-dot menu. Check its Sub/Dub version before saving.
+
+**Why is Dub or a quality option missing?** Available versions, sources, and quality choices vary by episode. A playback preference cannot add a Dub version or resolution that the source does not provide. The source and 360p quality shown in the video are examples; choose from the options available to you.
+
+Downloads include the subtitles supplied by the source. Sub and Dub are separate downloads, so saving one does not save the other. Downloads use your current Wi-Fi or mobile connection, and higher quality uses more storage.
 
 Supported MP4 and on-demand HLS sources can be saved. Live streams, embedded-only players, and unsupported protected media cannot be downloaded. Season-wide batch downloads, manual pause/resume, and external file export are not currently available.
 
 ## Watch offline
 
-Open **Library → Downloads** and choose a completed episode. To check an episode before travelling, turn on airplane mode, reopen the app, and test playback, sound, subtitles, and seeking.
+Open **Library → Downloads**, find an entry marked **Ready offline**, and tap **Watch offline**. To check an episode before travelling, turn on airplane mode, reopen the app, and test playback, sound, subtitles, and seeking.
 
 Background transfers depend on the operating system. In particular, iOS may delay transfers while the app is suspended. If progress stalls, bring Anizuno to the foreground and check the download status. Background completion is not guaranteed on every device or source.
 

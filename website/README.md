@@ -42,6 +42,7 @@ This command reads the public GitHub API without credentials. The snapshot is wr
 - Help center: `docs/`, served at `/Anizuno/help/`.
 - Policy pages: `src/pages/privacy.md` and `terms.md`.
 - App screenshots: `static/img/app-screens.jpg`, optimized from the existing nine-panel `.github/readme-images/screenshot.png`. These are existing app captures, not newly captured v1.2.5 screens. The visible caption notes device/version differences. Replace the source when fresh captures are available; each panel has the same 1668:2420 aspect ratio.
+- Download walkthrough: `static/media/anizuno-downloads-faq.mp4`, its poster, and English `.vtt` instructions. The shared `src/components/DownloadWalkthrough/` player appears in the homepage FAQ and playback/download guide. The 84-second recording shows real Android Sub and Dub downloads; it is silent, uses native controls, and loads video only when requested (`preload="none"`, no autoplay). Asset URLs use Docusaurus `useBaseUrl` for GitHub Pages.
 - App icon: copied from the current React Native iOS asset catalog.
 - Manrope fonts: self-hosted in `static/fonts/` with their OFL license. No external font or badge requests.
 
