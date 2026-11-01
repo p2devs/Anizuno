@@ -29,6 +29,7 @@
 
 ## 📑 Table of Contents
 
+- [Sponsors](#sponsors)
 - [Features](#features)
 - [Screenshots](#screenshots)
 - [Tech Stack](#tech-stack)
@@ -36,6 +37,10 @@
 - [Contact](#contact)
 - [Download](#download)
 - [Acknowledgements](#acknowledgements)
+
+## Sponsors
+
+**Sponsored by <a href="https://vgtopup.com/" rel="sponsored">VGTopup</a>.** Thank you for supporting Anizuno!
 
 ## Features
 

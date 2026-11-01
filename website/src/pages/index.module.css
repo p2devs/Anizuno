@@ -498,6 +498,7 @@
   padding-right: 25px;
   margin-bottom: 25px;
 }
+.sponsors,
 .community {
   border-top: 1px solid var(--anizuno-border);
   display: flex;
@@ -506,13 +507,21 @@
   gap: 36px;
   padding-block: 48px 70px;
 }
+.sponsors h2,
 .community h2 {
   font-size: 2rem;
   margin-bottom: 10px;
 }
+.sponsors p,
 .community p {
   margin: 0;
   font-size: 0.88rem;
+}
+.sponsors {
+  flex-wrap: wrap;
+}
+.sponsors .featureLabel {
+  margin-bottom: 10px;
 }
 .communityActions {
   display: flex;
@@ -625,6 +634,7 @@
     gap: 25px;
     padding-top: 0;
   }
+  .sponsors,
   .community {
     padding-block: 40px;
   }
@@ -742,6 +752,7 @@
   .faq {
     padding-top: 0;
   }
+  .sponsors,
   .community {
     flex-direction: column;
     align-items: flex-start;

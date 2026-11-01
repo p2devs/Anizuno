@@ -102,7 +102,7 @@ const questions = [
 
 export default function Home() {
   const brokenLinks = useBrokenLinks();
-  ['features', 'download', 'release', 'faq'].forEach(id =>
+  ['features', 'download', 'release', 'faq', 'sponsors'].forEach(id =>
     brokenLinks.collectAnchor(id),
   );
   const { release, status } = useRelease();
@@ -494,6 +494,26 @@ export default function Home() {
               </details>
             ))}
           </div>
+        </section>
+
+        <section
+          id="sponsors"
+          className={`${styles.section} ${styles.sponsors}`}
+          aria-labelledby="sponsors-title"
+        >
+          <div>
+            <span className={styles.featureLabel}>Sponsored</span>
+            <h2 id="sponsors-title">VGTopup</h2>
+            <p>Thank you to VGTopup for supporting Anizuno.</p>
+          </div>
+          <a
+            className={styles.secondaryButton}
+            href="https://vgtopup.com/"
+            rel="sponsored"
+          >
+            Visit VGTopup
+            <Arrow />
+          </a>
         </section>
 
         <section

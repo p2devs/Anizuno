@@ -87,6 +87,11 @@ const config = {
             { label: 'Discord', href: 'https://discord.gg/AqBDUDMkKa' },
             { label: 'GitHub', href: 'https://github.com/p2devs/Anizuno' },
             { label: 'Support development', href: 'https://ko-fi.com/p2devs' },
+            {
+              label: 'VGTopup (Sponsored)',
+              href: 'https://vgtopup.com/',
+              rel: 'sponsored noopener noreferrer',
+            },
           ],
         },
         {
