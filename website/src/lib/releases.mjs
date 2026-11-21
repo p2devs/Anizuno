@@ -2,18 +2,18 @@ export const LINKS = {
   latest: 'https://github.com/p2devs/Anizuno/releases/latest',
   releases: 'https://github.com/p2devs/Anizuno/releases',
   api: 'https://api.github.com/repos/p2devs/Anizuno/releases/latest',
-  testflight: 'https://testflight.apple.com/join/sV2XjUus',
   web: 'https://capacity.rocks/',
   discord: 'https://discord.gg/AqBDUDMkKa',
   donate: 'https://ko-fi.com/p2devs',
 };
 
-function releaseUrl(value, path) {
+function releaseUrl(value, path, extension = '') {
   try {
     const url = new URL(value);
     return url.protocol === 'https:' &&
       url.hostname === 'github.com' &&
       url.pathname.startsWith(`/p2devs/Anizuno/releases/${path}/`) &&
+      url.pathname.toLowerCase().endsWith(extension) &&
       !url.username &&
       !url.password
       ? url.href
@@ -23,26 +23,29 @@ function releaseUrl(value, path) {
   }
 }
 
-export function selectApk(assets = []) {
-  if (!Array.isArray(assets)) return null;
-  const apks = assets.filter(
-    asset =>
+function releaseDownloads(assets, extension) {
+  if (!Array.isArray(assets)) return [];
+  return assets
+    .filter(asset =>
       asset?.state === 'uploaded' &&
       typeof asset.name === 'string' &&
-      /\.apk$/i.test(asset.name) &&
-      releaseUrl(asset.browser_download_url, 'download'),
-  );
+      asset.name.toLowerCase().endsWith(extension) &&
+      releaseUrl(asset.browser_download_url, 'download', extension),
+    )
+    .map(asset => ({ name: asset.name, url: asset.browser_download_url, size: asset.size }));
+}
+
+export function selectApk(assets = []) {
+  const apks = releaseDownloads(assets, '.apk');
   // Split APKs require a device choice. Never guess an architecture.
   const universal = apks.find(asset => /universal/i.test(asset.name));
-  const asset =
+  return (
     universal ||
     (apks.length === 1 &&
-    !/(arm64|armeabi|armv7|x86|aarch64)/i.test(apks[0].name)
+      !/(arm64|armeabi|armv7|x86|aarch64)/i.test(apks[0].name)
       ? apks[0]
-      : null);
-  return asset
-    ? { name: asset.name, url: asset.browser_download_url, size: asset.size }
-    : null;
+      : null)
+  );
 }
 
 export function parseRelease(data) {
@@ -73,11 +76,13 @@ export function parseRelease(data) {
           .filter(Boolean)
           .slice(0, 3)
       : [];
+  const ipas = releaseDownloads(data.assets, '.ipa');
   return {
     version: `v${data.tag_name.replace(/^v/i, '')}`,
     publishedAt: data.published_at,
     url: data.html_url,
     apk: selectApk(data.assets),
+    ipa: ipas.length === 1 ? ipas[0] : null,
     highlights: highlights.length
       ? highlights
       : ['See the full release notes on GitHub.'],
@@ -102,8 +107,8 @@ export function formatDate(value) {
   return `${date.getUTCDate()} ${months[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
 }
 
-export function formatSize(bytes) {
+export function formatSize(bytes, fileType = 'APK') {
   return Number.isFinite(bytes) && bytes > 0
     ? `${Math.round(bytes / 1024 / 1024)} MB`
-    : 'APK';
+    : fileType;
 }

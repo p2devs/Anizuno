@@ -1,12 +1,12 @@
 ---
 title: Terms of Use
-description: Information about using Anizuno, external content, downloads, and beta availability.
+description: Information about using Anizuno, external content, app downloads, and updates.
 wrapperClassName: policy-page
 ---
 
 # Terms of Use
 
-Updated 3 October 2026
+Updated 21 November 2026
 
 These terms describe use of the Anizuno app and website, maintained by P2 Devs. For questions, contact [anizuno@capacity.rocks](mailto:anizuno@capacity.rocks).
 
@@ -22,7 +22,7 @@ Anime information, images, schedules, and playable sources can come from externa
 
 Some builds focus on discovery and tracking and open an official streaming service. Other builds enable in-app playback and supported downloads. Features vary by release, device, and source; the presence of a feature on this website does not mean it is available in every build.
 
-External websites and services, including GitHub, Apple TestFlight, Discord, and donation platforms, have their own terms. Check those terms when using them.
+External websites and services, including GitHub, iOS sideloading tools, Discord, and donation platforms, have their own terms. Check those terms when using them.
 
 ## Downloads and your library
 
@@ -30,9 +30,9 @@ Downloads are for use within supported app functionality and only where the sour
 
 Favorites, watch history, progress, and downloaded files are stored locally. Clearing app data, uninstalling, device loss, or operating-system cleanup can remove them. The current app does not offer account-based library sync or backup export.
 
-## Beta builds and changes
+## App releases and updates
 
-TestFlight builds are beta software. Testing slots may be unavailable and builds may expire. Updates can change features or device requirements. Refer to the relevant release notes before updating.
+P2 Devs publishes Android APKs and iOS IPAs on [GitHub Releases](https://github.com/p2devs/Anizuno/releases). A sideloaded iOS app may need to be signed again to keep working. Updates can change features or device requirements. Refer to the relevant release notes before updating.
 
 ## Age-restricted sections
 

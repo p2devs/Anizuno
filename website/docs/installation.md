@@ -1,6 +1,6 @@
 ---
 title: Install and update
-description: Get started with Anizuno on Android, iOS through TestFlight, or Web at capacity.rocks.
+description: Install the Android APK, download and sideload the iOS IPA on iPhone or iPad, or open Anizuno on the web.
 ---
 
 # Install and update
@@ -24,22 +24,38 @@ If installation fails, check free storage and the release's device requirements.
 
 ## iPhone and iPad
 
-1. Install [TestFlight from Apple](https://apps.apple.com/app/testflight/id899247664).
-2. Open the [Anizuno TestFlight invitation](https://testflight.apple.com/join/sV2XjUus) on your device.
-3. Follow TestFlight's steps to join and install the beta.
+Starting with v1.2.7, Anizuno distributes iOS updates as IPA files and has stopped publishing builds to TestFlight. The IPA is the app file. A sideloading tool signs it for your device and installs it.
 
-TestFlight shows the current beta's device requirements and availability. Invitations can be full or temporarily closed, and beta builds can expire. If you cannot join, check [Discord](https://discord.gg/AqBDUDMkKa) for updates. The invitation does not guarantee an available slot.
+### Download the IPA
 
-For updates, open TestFlight and check Anizuno's available builds. Android APKs cannot be installed on iOS.
+On your iPhone or iPad, tap **Download iOS IPA** in the [Anizuno download section](/#download). In Safari, confirm the download, then open **Files → Downloads** or the folder you chose.
+
+You can also download it directly from [GitHub Releases](https://github.com/p2devs/Anizuno/releases). Open the newest release that includes an iOS build, expand **Assets**, and choose the file ending in `.ipa`, such as `Anizuno-v1.2.7.ipa`.
+
+### Install with AltStore Classic
+
+For the first installation, have your iPhone or iPad, a Mac or Windows PC, a USB cable, and your Apple Account ready.
+
+1. **Set up AltStore Classic.** Install AltServer on your computer, connect and unlock your device, then use AltServer’s **Install AltStore** menu to select it. Follow the official setup guide for your computer. [Mac setup](https://faq.altstore.io/altstore-classic/how-to-install-altstore-macos) · [Windows setup](https://faq.altstore.io/altstore-classic/how-to-install-altstore-windows)
+2. **Allow the app to run.** On your device, open **Settings → General → VPN & Device Management** and trust the developer profile for your own Apple Account. On iOS or iPadOS 16 and later, enable **Settings → Privacy & Security → Developer Mode**, restart, and confirm when prompted.
+3. **Install Anizuno.** Leave AltServer running. Keep your device connected by USB or on the same Wi-Fi network as your computer with Wi-Fi sync enabled. On your device, open **AltStore Classic → My Apps**, tap **+**, and choose the Anizuno IPA from Files. Once Anizuno appears in **My Apps**, open it from your Home Screen.
+
+### Refresh or update Anizuno
+
+With a free Apple Account, the signing period lasts seven days. To keep the installed version working, open **AltStore Classic → My Apps → Refresh All** while AltServer is reachable. [AltStore refresh guide](https://faq.altstore.io/altstore-classic/your-altstore)
+
+To get a **new Anizuno version**, download the newer IPA and install it through **My Apps → +** using the same Apple Account. If the app’s **Update** button opens TestFlight, use the [website download section](/#download).
+
+If you are moving from TestFlight, keep your existing installation until you have checked your library in the sideloaded app. Anizuno stores your library, progress, and downloads locally.
 
 ## Web
 
-Open **[Anizuno on Web](https://capacity.rocks/)** in your browser. No APK or TestFlight installation is needed.
+Open **[Anizuno on Web](https://capacity.rocks/)** in your browser.
 
 Bookmark capacity.rocks to return directly to the Web version. This showcase and help center is separate from the Web app.
 
 ## Choosing the latest release
 
-The homepage checks GitHub for the latest published Android release. If that lookup is unavailable, it keeps a previously verified release available and labels it accordingly. You can always check [GitHub releases directly](https://github.com/p2devs/Anizuno/releases/latest).
+The homepage checks the latest published GitHub release for an Android APK and an iOS IPA. If that lookup is unavailable, the download section shows the last verified release. You can also [check the latest release on GitHub](https://github.com/p2devs/Anizuno/releases/latest).
 
 Android and iOS releases can differ. Read the notes for the version you are installing.

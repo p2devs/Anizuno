@@ -8,7 +8,7 @@ slug: /
 
 Anizuno brings anime discovery, your personal library, and airing schedules together. Start with the guide that matches what you need.
 
-- **[Get started with Anizuno](./installation.md)** — Android APKs, the iOS TestFlight beta, and [Web](https://capacity.rocks/).
+- **[Get started with Anizuno](./installation.md)** — install the Android APK, [sideload the iOS IPA](./installation.md#iphone-and-ipad), or watch on [Web](https://capacity.rocks/).
 - **[Playback and downloads](./playback-downloads.md)** — sources, subtitles, quality, and offline episodes. Includes a [Sub/Dub download video](./playback-downloads.md#download-sub-and-dub).
 - **[Library and settings](./library-settings.md)** — favorites, watch history, themes, languages, and schedule alerts.
 
@@ -16,7 +16,7 @@ Anizuno brings anime discovery, your personal library, and airing schedules toge
 
 The available experience depends on your app version, build, device, and content source. Some builds focus on discovery and tracking and open an official streaming service. In-app playback and downloads appear only where enabled.
 
-This showcase describes the mobile app's capabilities and links to the [Web version at capacity.rocks](https://capacity.rocks/). The [GitHub release notes](https://github.com/p2devs/Anizuno/releases) describe each published Android release; TestFlight lists the available iOS beta. Features and updates can differ across Android, iOS, and Web.
+This showcase describes the mobile app's capabilities and links to the [Web version at capacity.rocks](https://capacity.rocks/). Each mobile release lists its changes and available Android and iOS files on [GitHub Releases](https://github.com/p2devs/Anizuno/releases). Features and updates can differ across Android, iOS, and Web.
 
 ## Still need a hand?
 

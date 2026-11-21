@@ -25,7 +25,7 @@ Open `http://127.0.0.1:4173/Anizuno/`. Production builds fail on broken internal
 
 ## Release information
 
-`src/lib/release-snapshot.json` is a verified public GitHub release, rendered into the static HTML so Android downloads work before JavaScript loads or when the API is unavailable. The homepage attempts a live refresh with an eight-second timeout. Failure keeps the snapshot and clearly labels it. Releases with only split APKs link to the release page rather than guessing an architecture.
+`src/lib/release-snapshot.json` records a verified public GitHub release. The static homepage includes its Android APK and iOS IPA links before JavaScript loads. The homepage also attempts a live refresh with an eight-second timeout. Failure keeps the snapshot and clearly labels it. Releases with only split APKs link to the release page. If the release has zero or multiple eligible IPA files, the iOS button opens GitHub Releases so visitors can check the assets.
 
 Refresh the fallback before publishing:
 
@@ -33,7 +33,7 @@ Refresh the fallback before publishing:
 npm run release:refresh
 ```
 
-This command reads the public GitHub API without credentials. The snapshot is written only after validation. The local React Native version is not used as proof of a published release. TestFlight availability is managed by Apple and may differ from Android.
+This command reads the public GitHub API without credentials and writes the snapshot after validation. The iOS download buttons use the uploaded IPA asset URL returned by GitHub. The sideloading and update instructions are in `docs/installation.md`.
 
 ## Content and assets
 

@@ -54,7 +54,9 @@ const questions = [
     'How do I install it?',
     <>
       On Android, download the APK and open it on your device. On iPhone or
-      iPad, use the TestFlight invitation. On Web,{' '}
+      iPad, download the IPA and{' '}
+      <Link to="/help/installation#iphone-and-ipad">sideload it with AltStore Classic</Link>.
+      On Web,{' '}
       <a href={LINKS.web}>open Anizuno in your browser</a> with no installation.
       Our <Link to="/help/installation">getting started guide</Link> covers all
       three platforms.
@@ -106,14 +108,16 @@ export default function Home() {
     brokenLinks.collectAnchor(id),
   );
   const { release, status } = useRelease();
-  const apk = release.apk;
+  const { apk, ipa } = release;
   const androidHref = apk?.url || release.url;
   const androidLabel = apk ? 'Download Android APK' : 'Choose an Android APK';
+  const iosHref = ipa?.url || LINKS.releases;
+  const iosLabel = ipa ? 'Download iOS IPA' : 'Browse GitHub releases';
 
   return (
     <Layout
       title="Your anime. Pick up where you left off."
-      description="Discover anime, keep your favorites together, and follow upcoming episodes. Get Anizuno for Android, join the iOS TestFlight beta, or watch on Web."
+      description="Discover anime, keep your favorites together, and follow upcoming episodes. Download the Android APK or iOS IPA, learn how to sideload on iPhone and iPad, or watch on Web."
     >
       <main className={styles.home}>
         <section
@@ -143,9 +147,9 @@ export default function Home() {
                 {androidLabel}
                 <Arrow down />
               </a>
-              <a className={styles.secondaryButton} href={LINKS.testflight}>
-                Join iOS TestFlight
-                <Arrow />
+              <a className={styles.secondaryButton} href={iosHref}>
+                {iosLabel}
+                <Arrow down={Boolean(ipa)} />
               </a>
               <a className={styles.secondaryButton} href={LINKS.web}>
                 Watch on Web
@@ -153,8 +157,8 @@ export default function Home() {
               </a>
             </div>
             <p className={styles.downloadMeta}>
-              Free to use <span>·</span> Android, iOS & Web <span>·</span>{' '}
-              <Link to="/help/installation">Getting started</Link>
+              Free to use <span>·</span> <Link to="/help/installation">Getting started</Link>
+              <span>·</span> <Link to="/help/installation#iphone-and-ipad">iOS sideloading guide</Link>
             </p>
           </div>
           <div className={styles.heroVisual}>
@@ -391,18 +395,20 @@ export default function Home() {
             <article className={styles.downloadCard}>
               <div className={styles.platformTitle}>
                 <h3>iPhone & iPad</h3>
-                <span>TestFlight beta</span>
+                <span>IPA download</span>
               </div>
-              <p>Install TestFlight, then open the Anizuno invitation.</p>
-              <a className={styles.secondaryButton} href={LINKS.testflight}>
-                Join iOS TestFlight
-                <Arrow />
+              <p>Download the IPA, then install it with AltStore Classic.</p>
+              <a className={styles.secondaryButton} href={iosHref}>
+                {iosLabel}
+                <Arrow down={Boolean(ipa)} />
               </a>
               <p className={styles.downloadDetails}>
-                Beta access depends on available testing slots.
+                {ipa
+                  ? `${release.version} · ${formatSize(ipa.size, 'IPA')}`
+                  : 'Look for an .ipa file under Assets.'}
               </p>
               <Link to="/help/installation#iphone-and-ipad">
-                How to join on iOS
+                How to sideload on iPhone or iPad
                 <Arrow />
               </Link>
             </article>

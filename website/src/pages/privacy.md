@@ -6,7 +6,7 @@ wrapperClassName: policy-page
 
 # Privacy Policy
 
-Updated 3 October 2026
+Updated 21 November 2026
 
 Anizuno is maintained by P2 Devs. This page explains how the app and this website handle information. Contact [anizuno@capacity.rocks](mailto:anizuno@capacity.rocks) with privacy questions or requests.
 
@@ -36,11 +36,11 @@ Where an adult section is available, device authentication is handled through th
 
 Catalog searches, anime details, schedules, playback, and downloads make requests to Anizuno's API and relevant external providers. These services receive the request information needed to respond, which can include your IP address, requested content, and device or network headers. ConfigCat is used to retrieve app configuration and feature availability.
 
-Apple TestFlight, GitHub downloads, Discord, donation services, and external streaming providers operate under their own policies. Following a link or using their service can share information with that provider. See [ConfigCat's privacy policy](https://configcat.com/privacy/), [Apple's privacy policy](https://www.apple.com/legal/privacy/), and [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+GitHub hosts the Android and iOS downloads. Apple, the sideloading tool you choose, Discord, donation services, and external streaming providers operate under their own policies. Following a link or using their service can share information with that provider. See [ConfigCat's privacy policy](https://configcat.com/privacy/), [Apple's privacy policy](https://www.apple.com/legal/privacy/), and [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
 ## This website
 
-This site is hosted on GitHub Pages. GitHub handles the network requests used to serve it. The homepage requests public release information from the GitHub API so it can display the available Android download. Fonts and app screenshots are served with the site rather than requested from a third-party font or image service.
+This site is hosted on GitHub Pages. GitHub handles the network requests used to serve it. The homepage requests public release information from the GitHub API so it can display available Android and iOS downloads. Fonts and app screenshots are served with the site rather than requested from a third-party font or image service.
 
 The website remembers your selected display theme in your browser. The website itself does not add an analytics tracker or advertising cookies.
 

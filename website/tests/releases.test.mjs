@@ -14,6 +14,28 @@ test('renders release dates consistently in UTC without locale-dependent abbrevi
 test('finds the APK even when it is not the first release asset', () => {
   assert.equal(selectApk(release.assets).name, 'Anizuno.apk');
 });
+test('selects the iOS and Android downloads independently in either asset order', () => {
+  const ipa = asset('Anizuno.IPA');
+  for (const assets of [[ipa, ...release.assets], [...release.assets, ipa]]) {
+    const result = parseRelease({ ...release, assets });
+    assert.deepEqual(result.ipa, { name: ipa.name, url: ipa.browser_download_url, size: ipa.size });
+    assert.equal(result.apk.name, 'Anizuno.apk');
+  }
+  assert.equal(parseRelease({ ...release, assets: [ipa] }).apk, null);
+});
+test('keeps the iOS release-list fallback when there is no single official, uploaded IPA', () => {
+  const ipa = asset('Anizuno.ipa');
+  for (const assets of [
+    null,
+    release.assets,
+    [ipa, asset('other.ipa')],
+    [{ ...ipa, state: 'new' }],
+    [{ ...ipa, browser_download_url: 'https://example.com/app.ipa' }],
+    [{ ...ipa, browser_download_url: asset('Anizuno.apk').browser_download_url }],
+  ]) {
+    assert.equal(parseRelease({ ...release, assets }).ipa, null);
+  }
+});
 test('prefers a universal APK over architecture-specific downloads', () => {
   assert.equal(selectApk([asset('arm64.apk'), asset('universal.apk'), asset('x86.apk')]).name, 'universal.apk');
 });
@@ -48,8 +70,15 @@ test('valid releases without APKs retain the release-page destination', () => {
 test('rate limiting and network failure reject without an unusable download result', async () => {
   await assert.rejects(fetchLatestRelease({ fetcher: async () => ({ ok: false, status: 403 }) }), /403/);
   await assert.rejects(fetchLatestRelease({ fetcher: async () => { throw new TypeError('Network unavailable'); } }), /Network unavailable/);
-  // The hook keeps this verified, statically rendered fallback on lookup failure.
-  assert.equal(snapshot.apk.url, asset('Anizuno-v1.2.4.apk').browser_download_url);
+  // The hook keeps the snapshot's release page and any verified downloads.
+  assert.ok(snapshot.url.startsWith(`${LINKS.releases}/tag/`));
+  const downloadPath = snapshot.url.replace('/tag/', '/download/');
+  for (const type of ['apk', 'ipa']) {
+    const file = snapshot[type];
+    if (file === null) continue;
+    assert.ok(file.name.toLowerCase().endsWith(`.${type}`));
+    assert.equal(file.url, `${downloadPath}/${encodeURIComponent(file.name)}`);
+  }
 });
 test('successful lookup uses the public endpoint and propagates cancellation', async () => {
   const controller = new AbortController();

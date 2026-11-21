@@ -1,12 +1,21 @@
 {
-  "version": "v1.2.4",
-  "publishedAt": "2026-09-18T08:43:45Z",
-  "checkedAt": "2026-10-03T00:00:00Z",
-  "url": "https://github.com/p2devs/Anizuno/releases/tag/1.2.4",
+  "version": "v1.2.7",
+  "publishedAt": "2026-11-21T11:16:05Z",
+  "url": "https://github.com/p2devs/Anizuno/releases/tag/1.2.7",
   "apk": {
-    "name": "Anizuno-v1.2.4.apk",
-    "url": "https://github.com/p2devs/Anizuno/releases/download/1.2.4/Anizuno-v1.2.4.apk",
-    "size": 108853076
+    "name": "Anizuno-v1.2.7.apk",
+    "url": "https://github.com/p2devs/Anizuno/releases/download/1.2.7/Anizuno-v1.2.7.apk",
+    "size": 108886984
   },
-  "highlights": ["Fixed source-related issues."]
+  "ipa": {
+    "name": "Anizuno-v1.2.7.ipa",
+    "url": "https://github.com/p2devs/Anizuno/releases/download/1.2.7/Anizuno-v1.2.7.ipa",
+    "size": 10224821
+  },
+  "highlights": [
+    "Sub and Dub start in the right language. Sub now starts with the original audio, and Dub starts in English when those tracks are available.",
+    "Switch audio languages while watching. Open Audio language in the player menu to choose another track. You can also switch languages in fullscreen using the native Android or iOS playback controls.",
+    "Choose which audio to download. Pick a language for one episode or an entire batch, even when the source offers only one video quality. Each offline copy includes the selected audio track and the available subtitles."
+  ],
+  "checkedAt": "2026-11-21T11:28:03.992Z"
 }
